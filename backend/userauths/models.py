@@ -27,4 +27,15 @@ class User(AbstractBaseUser):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.FileField(upload_to='user_folder', default='default_user.jpg', null=True, blank=True)
+    country= models.CharField(max_length=100)
+    full_name= models.CharField(max_length=100, null=True, blank=True)
+    about = models.TextField(null=True, blank=True)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        if self.full_name:
+            return str(self.full_name)
+        else:
+            return str(self.user.full_name)
+
 
