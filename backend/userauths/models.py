@@ -24,5 +24,6 @@ class User(AbstractBaseUser):
             self.username == email_username
         super(User, self).save(*args, **kwargs)
 
-
+class Profile(models.Model):
+    
 
