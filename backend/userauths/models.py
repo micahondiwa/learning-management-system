@@ -3,5 +3,5 @@ from django.contrib.auth.models import AbstractBaseUser
 
 # Create your models here.
 
-class CustomUser(AbstractBaseUser):
-    pass
+class User(AbstractBaseUser):
+    username = models.CharField(unique=True)
