@@ -25,5 +25,5 @@ class User(AbstractBaseUser):
         super(User, self).save(*args, **kwargs)
 
 class Profile(models.Model):
-    
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
