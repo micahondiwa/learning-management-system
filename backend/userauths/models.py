@@ -14,4 +14,7 @@ class User(AbstractBaseUser):
 
     def __str__(self):
         return self.email
+    
+    def save(self, *args, **kwargs):
+        email_username, full_name = self.email.split('@')
 
