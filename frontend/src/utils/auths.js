@@ -70,3 +70,15 @@ export const setUser = async () => {
         setAuthUser(access_token, refresh_token);
     }
 };
+
+export const setAuthUser = (access_token, refresh_token) => {
+    Cookie.set('access_token', access_token, {
+        expires: 1,
+        secure: true,
+    });
+
+    Cookie.set('access_refresh', refresh_token, {
+        expires: 7,
+        secure: true,
+    });
+};
