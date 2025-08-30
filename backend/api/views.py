@@ -17,6 +17,7 @@ class RegisterView(generics.CreateAPIView):
 
 def generate_random_otp(length=7):
     otp = ''.join([str(random.randint(0, 9)) for _ in range(length)])
+    return otp
 
 class PasswordResetEmailVerifyAPIView(generics.RetrieveAPIView):
     Permission_class = [AllowAny]
@@ -28,4 +29,4 @@ class PasswordResetEmailVerifyAPIView(generics.RetrieveAPIView):
         user = User.objects.filter(email=email).first()
 
         if user:
-            user.objects.otp = 
+            user.objects.otp = generate_random_otp()
