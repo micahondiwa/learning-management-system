@@ -30,4 +30,6 @@ class PasswordResetEmailVerifyAPIView(generics.RetrieveAPIView):
 
         if user:
             user.objects.otp = generate_random_otp()
+            user.save()
+            
             uuidb64 = user.pk
