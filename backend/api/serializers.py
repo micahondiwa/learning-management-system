@@ -29,13 +29,16 @@ class RegistrationSerializer(serializers.ModelSerializer):
     
     def creat(self, validated_data):
         user = User.objects.create(
-            full_name=validate_data['full_name'],
-            email=validated_data['email'],
+            full_name = validate_data['full_name'],
+            email = validated_data['email'],
         )
 
         email_username, _ = user.email.split("@")
         user.username = email_username
+        user.set_password(validated_data['password'])
         user.save()
+
+        return user
 
 class UserSerializer(serializers.ModelSerializer):
 
