@@ -18,7 +18,7 @@ export const login = async (email, password) => {
         return { data, error: null }
     } catch (error) {
         return {
-            data: null,
+            data: error,
             eorr: error.response.data?.deatil || "Something went wrong",
         }
     };
@@ -36,7 +36,7 @@ export const register = async (full_name, email, password, password2) => {
 
         await login(email, password);
         alert("Registration Successful")
-        return { data, error.null }
+        return { data, error: null }
     } catch (error) {
         return {
             data: null,
