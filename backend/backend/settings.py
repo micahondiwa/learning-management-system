@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'drf_yasg',
 
     'api',
     'core',
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "anymail",
     'storages',
-    'django_ckeditor_5',
+    'django_ckeditor_5', 
 ]
 
 MIDDLEWARE = [
@@ -145,9 +146,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL ='userauths.User'
 
-MAILGUN_SECRET_KEY = env("MAILGUN_SECRET_KEY")
-MAILGUN_API_TOKEN = env("MAILGUN_API_TOKEN")
-MAILGUN_SENDER_DOMAIN = env("MAILGUN_SENDER_DOMAIN")
+# MAILGUN_SECRET_KEY = env("MAILGUN_SECRET_KEY")
+# MAILGUN_API_TOKEN = env("MAILGUN_API_TOKEN")
+# MAILGUN_SENDER_DOMAIN = env("MAILGUN_SENDER_DOMAIN")
 
 ANY_MAIL = {
     "MAILGUN_API_TOKEN": env("MAILGUN_API_TOKEN"),
