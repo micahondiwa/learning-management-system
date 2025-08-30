@@ -51,7 +51,6 @@ export const logout = () => {
     Cookie.remove("access_token");
     Cookie.remove("refresh_token");
     useAuthStore.getState().setUser(null);
-
     alert("You have been logged out");
 }
 
@@ -106,6 +105,7 @@ export const isAccessTokenExpired = async (access_token) => {
         const decodedToken = jwt_decode(access_token)
         return decodedToken.exp < Date.now() / 1000
     } catch (error) {
+        console.log(error)
         return true;
     }
 }
