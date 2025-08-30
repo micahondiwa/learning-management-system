@@ -32,9 +32,39 @@ export const register = async (full_name, email, password, password2) => {
             email,
             password,
             password2,
-        })
-    } catch (error) {
-        console.log
+        });
 
+        await login(email, password);
+        alert("Registration Successful")
+        return { data, error.null }
+    } catch (error) {
+        return {
+            data: null,
+            error: error.response.data?.deatil || "Something went wrong",
+        };
+
+    }
+};
+
+export const logout = () => {
+    Cookie.remove("access_token");
+    Cookie.remove("refresh_token");
+    useAuthStore.getState().setUser(null);
+
+    alert("You have been logged out");
+}
+
+export const setUser = async () => {
+    const access_token = Cookie.get('access_token');
+    const refresh_token = Cookie.get('refresh_token');
+
+    if (!access_token || !refresh_token) {
+        alert("Tokens do not exists")
+        return;
+    }
+
+    if (isAccessTokenExpired(access_token)) {
+        const response = getRefreshedToken(refresh_token);
+        setAuthUser(response.access, response.refresh);
     }
 };
