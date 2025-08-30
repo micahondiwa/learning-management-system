@@ -15,7 +15,7 @@ class RegisterView(generics.CreateAPIView):
     Permission_class = [AllowAny]
     serializer_class = api_serializer.RegistrationSerializer
 
-def generate_random_otp(length=7):
+def generate_random_otp(length=4):
     otp = ''.join([str(random.randint(0, 9)) for _ in range(length)])
     return otp
 
