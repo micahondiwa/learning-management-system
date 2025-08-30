@@ -1,12 +1,18 @@
-from django.shortcuts import render
+import random
+
+from userauths.models import User, Profile
 from api import serializers as api_serializer
+
+from django.shortcuts import render
+from django.core.mail import EmailMultiAlternatives
+
+
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import generics, status
-from userauths.models import User, Profile
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.response import Response
-import random
+
 
 # Create your views here.
 class MyTokenObtainPairView(TokenObtainPairView):

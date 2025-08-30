@@ -148,6 +148,11 @@ MAILGUN_SECRET_KEY = env("MAILGUN_SECRET_KEY")
 MAILGUN_API_TOKEN = env("MAILGUN_API_TOKEN")
 MAILGUN_SENDER_DOMAIN = env("MAILGUN_SENDER_DOMAIN")
 
+ANY_MAIL = {
+    "MAILGUN_API_TOKEN": env("MAILGUN_API_TOKEN"),
+    "MAILGUN_SENDER_DOMAIN": env("MAILGUN_SENDER_DOMAIN")
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
