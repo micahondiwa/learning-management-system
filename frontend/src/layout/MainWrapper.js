@@ -16,4 +16,5 @@ const MainWrapper = ({ children }) => {
         handler();
     }, []);
 
+    return <>{loading ? null : children}</>
 };
