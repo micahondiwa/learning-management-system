@@ -13,8 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
-from environs import env
+from environs import Env
 
+env = Env()
 env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -152,6 +153,9 @@ ANY_MAIL = {
     "MAILGUN_API_TOKEN": env("MAILGUN_API_TOKEN"),
     "MAILGUN_SENDER_DOMAIN": env("MAILGUN_SENDER_DOMAIN")
 }
+
+FROM_EMAIL = env("FROM_EMAIL")
+EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
