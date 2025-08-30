@@ -57,6 +57,6 @@ class PasswordChangeAPIView(generics.CreateAPIView):
         user =User.objects.get(id=uuidb64, otp=opt)
         if user:
             user.set_password(password)
-            user.otp=""
+            user.otp = ""
             user.save()
         return Response({"message": "Password Changed Successfully"}, status=status.HTTP_201_CREATED)
