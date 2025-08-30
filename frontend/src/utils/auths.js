@@ -37,6 +37,7 @@ export const register = async (full_name, email, password, password2) => {
         await login(email, password);
         alert("Registration Successful")
         return { data, error: null }
+
     } catch (error) {
         return {
             data: null,
