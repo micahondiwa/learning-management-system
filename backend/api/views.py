@@ -59,4 +59,6 @@ class PasswordChangeAPIView(generics.CreateAPIView):
             user.set_password(password)
             user.otp = ""
             user.save()
-        return Response({"message": "Password Changed Successfully"}, status=status.HTTP_201_CREATED)
+            return Response({"message": "Password Changed Successfully"}, status=status.HTTP_201_CREATED)
+        else:
+            return Response({"message": "User Does Not Exists"}, status=status.HTTP_404_NOT_FOUND)
