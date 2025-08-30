@@ -41,3 +41,14 @@ class PasswordResetEmailVerifyAPIView(generics.RetrieveAPIView):
             link = f"http://localhost:5173/create-new-password/?otp={user.otp}$uuidb64={uuidb64}&=refresh_token{refresh_token}"
             print("link ===", link)
         return user
+
+class PasswordChangeAPIView(generics.CreateAPIView):
+    Permission_class = [AllowAny]
+    serializer_class = api_serializer.UserSerializer
+
+    def create(self, request, *args, **kwargs):
+        payload = request.data
+
+        otp = payload['otp']
+        uuidb64 = payload['uuidb64']
+        password = payload['password']
