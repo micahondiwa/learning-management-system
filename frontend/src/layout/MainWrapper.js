@@ -16,5 +16,7 @@ const MainWrapper = ({ children }) => {
         handler();
     }, []);
 
-    return <>{loading ? null : children}</>
+    return <>{loading ? null : children}</>;
 };
+
+export default MainWrapper;
