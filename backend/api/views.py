@@ -52,3 +52,9 @@ class PasswordChangeAPIView(generics.CreateAPIView):
         otp = payload['otp']
         uuidb64 = payload['uuidb64']
         password = payload['password']
+
+        user =User.objects.get(id=uuidb64, otp=opt)
+        if user:
+            user.set_password(password)
+            user.otp=""
+            user.save()
