@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from api import serializers as api_serializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework import generics
+from rest_framework import generics, status
 from userauths.models import User, Profile
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.response import Response
 import random
 
 # Create your views here.
@@ -58,3 +59,4 @@ class PasswordChangeAPIView(generics.CreateAPIView):
             user.set_password(password)
             user.otp=""
             user.save()
+        return Response({"message": "Password Changed Successfully"}, status=status.HTTP_201_CREATED)
