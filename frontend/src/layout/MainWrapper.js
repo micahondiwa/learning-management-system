@@ -4,4 +4,16 @@ import { setUser } from '../utils/auths'
 const MainWrapper = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
-}
+    useEffect(() => {
+        const handler = async () => {
+            setLoading(true);
+
+            await setUser();
+
+            setLoading(false);
+        };
+
+        handler();
+    }, []);
+
+};
