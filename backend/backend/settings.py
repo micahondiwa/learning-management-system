@@ -147,8 +147,8 @@ ANY_MAIL = {
     "MAILGUN_SENDER_DOMAIN": env("MAILGUN_SENDER_DOMAIN")
 }
 
-# FROM_EMAIL = env("FROM_EMAIL")
-# EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+FROM_EMAIL = env("FROM_EMAIL")
+EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
