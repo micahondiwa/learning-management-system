@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.3.8",
-    "react-bootstrap": "^2.10.10",
-    "react-player": "^3.3.2"
-  }
-}
