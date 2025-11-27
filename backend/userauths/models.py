@@ -23,7 +23,6 @@ class User(AbstractUser):
             self.username = email_username
         super(User, self).save(*args, **kwargs)
 
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.FileField(upload_to="user_folder", default="default-user.jpg", null=True, blank=True)
