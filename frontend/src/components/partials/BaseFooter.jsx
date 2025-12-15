@@ -61,7 +61,6 @@ function BaseFooter() {
           </div>
           <div className="offset-lg-1 col-lg-2 col-md-3 col-6">
             <div className="mb-4">
-
               {/* list */}
               <h3 className="fw-bold mb-3">Company</h3>
               <ul className="list-unstyled nav nav-footer flex-column nav-x-0">
