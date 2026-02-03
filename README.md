@@ -63,3 +63,5 @@ frontend/
 ├── package.json      
 └── vite.config.js   
 ```
+## Technologies and Dependencies
+
