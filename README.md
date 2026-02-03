@@ -64,4 +64,5 @@ frontend/
 └── vite.config.js   
 ```
 ## Technologies and Dependencies
+### Backend (Python/Django)
 
