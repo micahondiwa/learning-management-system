@@ -22,17 +22,27 @@ backend/
 │   ├── tests.py
 │   ├── urls.py
 ├── backend/          # Django project root (settings, main URLs)
-│   ├── settings.py   # Core configuration (apps, middleware, databases)
-│   ├── urls.py       # Main URL routing, includes admin, API docs (Swagger), and static/media serving
-│   ├── wsgi.py       # WSGI entry point (standard)
-│   ├── asgi.py       # ASGI entry point (standard)
-├── core/             # Intended for core LMS models (e.g., courses, lessons; currently empty)
-│   ├── models.py     # Empty models file
-├── templates/        # HTML templates (e.g., for emails)
-│   └── email/        # Directory for email templates (likely used for password reset or notifications)
-├── userauths/        # Custom user authentication app
-│   ├── models.py     # Custom User and Profile models
-├── manage.py         # Django CLI utility for admin tasks
-└── requirements.txt  # Python dependencies list
+│   ├── settings.py   
+│   ├── urls.py      
+│   ├── wsgi.py      
+│   ├── asgi.py       
+├── core/             # Core LMS models (e.g., courses, lessons; currently empty)
+│   ├── models.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── tests.py views.py
+│   ├── views.py  
+├── templates/        
+│   └── email/ password_reset.html
+│   └── email/ password_reset.txt      
+├── userauths/        
+│   ├── models.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── tests.py
+│   ├── views.py    
+├── manage.py        
+└── requirements.txt  
 ```
+
 
