@@ -74,3 +74,14 @@ frontend/
 - **Admin UI:** django-jazzmin 3.0.1 (customizable admin theme).
 - **Other:** corsheaders for cross-origin requests, environs for environment variables, pillow for image handling.
 
+### Frontend (JavaScript/React)
+Framework: React 19.1.1 with React DOM.
+Bundler: Vite 7.1.2 (fast development server).
+Routing: react-router-dom 7.8.2 for client-side navigation.
+State Management: zustand 5.0.8 (lightweight alternative to Redux).
+API Calls: axios 1.11.0 for HTTP requests to the backend.
+Auth Helpers: jwt-decode 4.0.0 for decoding JWTs; js-cookie 3.0.5 for cookie management.
+UI: sweetalert2 11.22.5 for modals/alerts.
+Dev Tools: ESLint 9.33.0 with plugins for React hooks and refresh.
+The package.json indicates a private app at version 0.0.0, with no custom build configurations yet.
+
