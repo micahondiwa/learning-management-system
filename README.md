@@ -10,3 +10,6 @@ learning-management-system/
 └── README.md         # Brief project description
 ```
 
+### Backend Directory (Detailed Tree)
+
+
