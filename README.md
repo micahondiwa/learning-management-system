@@ -10,7 +10,7 @@ learning-management-system/
 └── README.md         
 ```
 
-### Backend Directory (Detailed Tree)
+### Backend 
 ```
 backend/
 ├── api/              # Handles REST API endpoints and models for LMS features
@@ -44,5 +44,6 @@ backend/
 ├── manage.py        
 └── requirements.txt  
 ```
+### Frontend 
 
 
