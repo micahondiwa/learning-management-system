@@ -65,4 +65,12 @@ frontend/
 ```
 ## Technologies and Dependencies
 ### Backend (Python/Django)
+- **Framework:** Django 5.2.5 with Django REST Framework 3.16.1 for APIs.
+- **Authentication:** djangorestframework_simplejwt 5.5.1 for JWT tokens; custom user model with OTP for password resets.
+- **API Docs:** drf-yasg 1.21.11 for Swagger/OpenAPI documentation.
+- **Email:** django-anymail 13.0.1 (flexible email backends, e.g., for SendGrid or Mailgun).
+- **Storage:** django-storages 1.14.6 (for cloud file storage).
+- **Rich Text:** django-ckeditor-5 0.2.18 (for content editing in courses/lessons).
+- **Admin UI:** django-jazzmin 3.0.1 (customizable admin theme).
+- **Other:** corsheaders for cross-origin requests, environs for environment variables, pillow for image handling.
 
