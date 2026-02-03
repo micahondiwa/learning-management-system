@@ -46,4 +46,20 @@ backend/
 ```
 ### Frontend 
 
-
+```
+frontend/
+├── public/           
+├── src/              
+│   ├── App.jsx       
+│   ├── components/   
+│   ├── (other subdirs like assets/, pages/, services/ assumed for routing and API calls)
+│   ├── main.jsx      
+│   └── index.css     
+├── .gitignore       
+├── README.md         
+├── eslint.config.js  
+├── index.html        
+├── package-lock.json
+├── package.json      
+└── vite.config.js   
+```
