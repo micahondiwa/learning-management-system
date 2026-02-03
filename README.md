@@ -6,17 +6,21 @@ A Django + React comprehensive Learning Management System equipped with essentia
 learning-management-system/
 ├── backend/          # Django backend application
 ├── frontend/         # React frontend application
-├── .gitignore        # Standard Git ignore rules (e.g., excluding virtualenvs, build artifacts)
-└── README.md         # Brief project description
+├── .gitignore        
+└── README.md         
 ```
 
 ### Backend Directory (Detailed Tree)
-
+```
 backend/
 ├── api/              # Handles REST API endpoints and models for LMS features
 │   ├── models.py     
-│   ├── views.py      # Contains authentication-related views (e.g., registration, token, password reset)
-│   ├── (other files like serializers.py, urls.py assumed but not confirmed; likely present for API functionality)
+│   ├── views.py      
+│   ├── admin.py
+│   ├── apps.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
 ├── backend/          # Django project root (settings, main URLs)
 │   ├── settings.py   # Core configuration (apps, middleware, databases)
 │   ├── urls.py       # Main URL routing, includes admin, API docs (Swagger), and static/media serving
@@ -30,4 +34,5 @@ backend/
 │   ├── models.py     # Custom User and Profile models
 ├── manage.py         # Django CLI utility for admin tasks
 └── requirements.txt  # Python dependencies list
+```
 
