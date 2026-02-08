@@ -13,7 +13,7 @@ learning-management-system/
 ### Backend 
 ```
 backend/
-├── api/              # Handles REST API endpoints and models for LMS features
+├── api/             
 │   ├── models.py     
 │   ├── views.py      
 │   ├── admin.py
@@ -83,4 +83,5 @@ frontend/
 - **Auth Helpers:** jwt-decode 4.0.0 for decoding JWTs; js-cookie 3.0.5 for cookie management.
 - **UI:** sweetalert2 11.22.5 for modals/alerts.
 - **Dev Tools:** ESLint 9.33.0 with plugins for React hooks and refresh.
+
 
